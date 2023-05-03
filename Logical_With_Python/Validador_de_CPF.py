@@ -1,9 +1,21 @@
-cpf = input('Digite seu CPF: ')
+cpf = input('Digite somente os números do CPF:')
 
-while len(cpf) > 11 or len(cpf) < 11:
+while len(cpf) != 11:
     print('CPF INVÁLIDO!!!')
+    cpf = input('\nDigite seu CPF correto com 11 dígitos: ')
 
-    cpf = input('\nDigite seu CPF: ')
+while int(cpf[0]) == int(cpf[1 and 2 and 3 and 4 and 5]):
+    print('CPF INVÁLIDO, NÃO PODE CONTER TODOS OS NÚMEROS REPETIDOS!!!')
+    cpf = input('\nDigite seu CPF correto: ')
+
+
+while len(cpf) != 11:
+    print('CPF INVÁLIDO!!!')
+    cpf = input('\nDigite seu CPF correto com 11 dígitos: ')
+
+while int(cpf[0]) == int(cpf[1 and 2 and 3 and 4 and 5]):
+    print('CPF INVÁLIDO, NÃO PODE CONTER TODOS OS NÚMEROS REPETIDOS!!!')
+    cpf = input('\nDigite seu CPF correto: ')
 
 num1 = ((int(cpf[0]) * 10)
         + (int(cpf[1]) * 9)
@@ -29,8 +41,6 @@ num2 = ((int(cpf[0]) * 11)
         + (int(cpf[9]) * 2))
 
 r2 = (num2 * 10) % 11
-
-# print(r1, r2)
 
 if r1 == int(cpf[9]) and r2 == int(cpf[10]):
     print('O CPF é válido!!')
